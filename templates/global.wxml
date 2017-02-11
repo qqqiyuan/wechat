@@ -1,0 +1,8 @@
+<template name="loading">
+    <view wx:if="{{visibility == true}}" class="template-loading">
+        <view class="loading-box">
+            <view class='uil-ring-css' style='transform:scale(0.6);'><view class="uil-ring-css-view"></view></view>
+            <text class="loading-box-text">加载中...</text>
+        </view>
+    </view>
+</template>

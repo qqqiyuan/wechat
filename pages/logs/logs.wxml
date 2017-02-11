@@ -1,0 +1,53 @@
+<!--logs.wxml-->
+<view class="header">
+  <text class="header-text">追剧进度</text>
+</view>
+<view class="container log-list">
+  <form bindsubmit="savePlayInfor">
+    <view class="form-section">
+      <text class="label">剧名:</text>
+      <input placeholder="请填写剧名" class="input" value="{{play.name}}" name="name" type="text" focus="{{nameFocus}}"/>
+    </view>
+    <view class="form-section">
+      <text class="label">第几季:</text>
+      <input placeholder="追到第几季" class="input" value="{{play.season}}" name="season" type="number"/>
+    </view>
+    <view class="form-section">
+      <text class="label">第几集:</text>
+      <input placeholder="追到第几集" class="input" value="{{play.task}}" name="task" type="number"/>
+    </view>
+    <view class="form-section">
+      <text class="label">时间截点:</text>
+      <view class="input input-picker">
+        <picker name="hour" style="flex:1" id="0" bindchange="bindNumChange" value="{{play.hour || 00}}" range="{{timeList}}">
+          <view class="picker">
+            <text class="picker-num-text">{{timeList[play.hour] || 00}}</text> 小时
+          </view>
+        </picker>
+        <picker name="minute" style="flex:1" id="1" bindchange="bindNumChange" value="{{play.minute || 00}}" range="{{timeList}}">
+          <view class="picker">
+            <text class="picker-num-text">{{timeList[play.minute] || 00}}</text> 分钟 
+          </view>
+        </picker>
+        <picker name="second" style="flex:1" id="2" bindchange="bindNumChange" value="{{play.second || 00}}" range="{{timeList}}">
+          <view class="picker">
+            <text class="picker-num-text">{{timeList[play.second] || 00}}</text> 秒 
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="form-section">
+      <text class="label"></text>
+      <view class="input">
+        <switch checked="{{play.watchEnd}}" value="{{play.watchEnd}}" name="watchEnd" bindchange="bindWatchEnd"/> 
+        <text wx:if="{{play.watchEnd}}" style="font-size: 24rpx; color: #ccc;">本集已看完</text>
+        <text wx:else style="font-size: 24rpx; color: #ccc;">本集未看完</text>
+      </view>
+    </view>
+    <view class="form-section form-section-textarea">
+      <text class="label">备注:</text>
+      <textarea maxlength="140" style="height: 200rpx;"  placeholder="想记点什么..." name="remark" class="input" value="{{play.remark}}" />
+    </view>
+    <button class="submit-btn" type="default"  form-type="submit"> 保存 </button>
+  </form>
+</view>

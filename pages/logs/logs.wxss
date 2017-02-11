@@ -1,0 +1,30 @@
+.form-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  border-bottom: 1px solid #e9e9e9;
+  height: 100rpx;
+}
+.form-section-textarea {
+  height: 300rpx;
+}
+.label {
+  flex: 1;
+  text-align: center;
+}
+.input {
+  flex: 2;
+}
+.input-picker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.submit-btn {
+  margin-top: 50rpx;
+  width: 600rpx;
+}
+.picker-num-text {
+  font-size: 28rpx;
+}

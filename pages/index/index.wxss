@@ -1,0 +1,147 @@
+/**index.wxss**/
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 70rpx;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-left: none;
+  padding-left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  line-height: 70rpx;
+  z-index: 9999;
+}
+.header-icon {
+  height: 70rpx;
+  width: 50rpx;
+  margin-left: 20rpx;
+  background-position: center;
+  background-size: 50rpx;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEXRSTlMAECAwQFBggJCfoMDP0ODv8NvQ/3EAAACQSURBVEjH7ZS7EoQgDEVhg6yiLLn//7NbOBZIEhobZ3LLwOGRwxCCx/O+7EdUxzKSAEAlFkhAZGzyfGr4inWF+DQUZSXGKux8YA/6WfNQrKhWNwaigKPR2wxQV1jBZNooaNQvkCb+OkK8lCFQE3BrY70IXcBIzATc1J7KTQHCI5kIGAjMBPRJjB/5H+HxPJ0/8uUFhwnTpR8AAAAASUVORK5CYII=);
+}
+.play-list {
+  padding-top: 70rpx;
+  padding-bottom: 150rpx;
+}
+
+.play-list-item-wrap {
+  border-bottom: 1px solid #e9e9e9;
+  height: 100rpx;   
+  overflow: hidden;
+  /*height: 240rpx;*/
+  transition: height 0.3s;
+  -moz-transition: height 0.3s; /* Firefox 4 */
+  -webkit-transition: height 0.3s; /* Safari 和 Chrome */
+  -o-transition: height 0.3s; /* Opera */
+}
+.play-list-item-wrap-toggle {
+  height: 240rpx;
+}
+.play-list-item {
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.play-list-item-info {
+  display: flex;
+  flex-direction: row;
+}
+.item-info-detail {
+  font-size: 24rpx;
+  text-align: left;
+  color: #7c7c7c;
+  flex-direction: column;
+}
+.item-info-detail-text {
+  margin-bottom: 15rpx;
+}
+
+
+.item-text {
+  font-size: 26rpx;
+}
+.item-icon {
+  height: 100rpx;
+  background-position: center;
+  background-size: 50rpx;
+  background-repeat: no-repeat;
+}
+.item-icon-more {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAPFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQLyYwAAAAE3RSTlMAECAwQFBgcH+foK+wv8/Q4O/w01KWVwAAAHxJREFUSMftlFEKgCAUBH1Zmlaa7v3v2hlGiArabwdkdnnO/XljzEMgKzBgkRIjAiZ812GUKJCoKhNzW9X8zYTLooVwIkrr3RWGPlD6homZEZUBltTJqqyok7590YneN1Xyn9C0G6s5w+lFphNN9es6F6jTZaRz5Nz/eSYX80MGGC5Ly4QAAAAASUVORK5CYII=);
+}
+.item-icon-more-unfold {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEXRSTlMAECAwQFBggJCfoMDP0ODv8NvQ/3EAAACQSURBVEjH7ZS7EoQgDEVhg6yiLLn//7NbOBZIEhobZ3LLwOGRwxCCx/O+7EdUxzKSAEAlFkhAZGzyfGr4inWF+DQUZSXGKux8YA/6WfNQrKhWNwaigKPR2wxQV1jBZNooaNQvkCb+OkK8lCFQE3BrY70IXcBIzATc1J7KTQHCI5kIGAjMBPRJjB/5H+HxPJ0/8uUFhwnTpR8AAAAASUVORK5CYII=);
+  transition: all 0.2s;
+  -moz-transition: all 0.2s; /* Firefox 4 */
+  -webkit-transition: all 0.2s; /* Safari 和 Chrome */
+  -o-transition: all 0.2s; /* Opera */
+}
+.item-icon-more-unfold-toggle {
+  transform: rotate(180deg);
+}
+.item-hover {
+  background-color: #f8f6f6;
+}
+
+.add-new {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIBAMAAABfdrOtAAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAD3RSTlMAEDA/QG9woK+wv8Df4P5BxkYCAAAA8UlEQVR42u3bIU4DQRiG4V3aYDC4IiDZI5AQPAJO0CoUvoojcAKOgMKj8D0B4QQcAYmBfr3BbMXMAsnz6j95kklmzOTvOkmSJEl/p/72+bg5cppsmiOPyVdzJElaG/MkGaZAriAQCAQCgUAgEAgEAoFAIBAIBAKB/G9kdlHsMkmW5ZnzMeMk5bZJ8jky9FA2+rcayHf51+swNZDcFZGjOsjL7yOTHFf/UQP5GfnuXNRA7scuysF1sZskWZVnBg8kBAKBQCAQCAQCgUAgEAgEAoFAIJD9kKExMskKVfc0xTLYWfLeHOnXr+0X9CRJkiTt3w5Gq3fkuUhDnAAAAABJRU5ErkJggg==);
+  background-position: center;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9;
+  position: fixed;
+  left: 50%;
+  margin-left: -50rpx;
+  bottom: 30rpx;
+  background-size: 70rpx;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 5px #e9e9e9;
+}
+
+
+/*占位图样式*/
+.item-placeholder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100rpx;
+}
+.item-placeholder-img {
+  width: 150rpx;
+  height: 150rpx;
+}
+.item-placeholder-text {
+  font-size: 26rpx;
+  margin-top: 50rpx;
+}
